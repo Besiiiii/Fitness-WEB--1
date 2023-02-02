@@ -15,7 +15,7 @@ require('db.php');?>
         <p>Hey, <?php echo $_SESSION['username']; ?>!</p>
         <p>You are in Admin area.</p>      
         <p><a href="index.html">Home</a> 
-        <a href="dashboard.php">Dashboard</a> 
+        <a href="admin_dashboard.php">Dashboard</a> 
         <a href="logout.php">Logout</a></p>
  
 </body>

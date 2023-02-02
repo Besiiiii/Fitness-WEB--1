@@ -26,7 +26,7 @@ require('db.php');?>
                 <th><strong>Email</strong></th>
                 <th><strong>Password</strong></th>
                 <th><strong>Comment</strong></th>
-                <th><strong>Date/Time</strong></th>
+                <th><strong>Date</strong></th>
                 <th><strong>Edit</strong></th>
                 <th><strong>Delete</strong></th>
             </tr>
@@ -44,6 +44,7 @@ while($row = mysqli_fetch_assoc($result1)) { ?>
     <td align="center"><?php echo $row["email"]; ?></td>
     <td align="center"><?php echo $row["password"]; ?></td>
     <td align="center"><?php echo $row["comment"]; ?></td>
+    <td align="center"><?php echo $row["create_datetime"]; ?></td>
     <td align="center">
     <a href="edit.php?id=<?php echo $row["id"]; ?>">Edit</a>
     </td>
