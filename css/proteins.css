@@ -29,7 +29,7 @@ body{
 }
 /**  Gain Bolic   **/
 
-.kombinimGB {
+.kombinim {
     width: 290px;
     height: 400px;
     font-family: sans-serif;
@@ -51,11 +51,11 @@ body{
     transform-style: preserve-3d;
 }
   
-.kombinimGB:hover .flip-card-inner {
+.kombinim:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
   
-.KombinimiGB-front, .flip-card-back {
+.kombinimi-front, .flip-card-back {
     box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
     position: absolute;
     display: flex;
@@ -86,100 +86,7 @@ body{
     font-size: 20px;
     text-align: center;
 }
-
-  /** BCAA  **/
-
-.kombinimBCAA {
-    width: 290px;
-    height: 400px;
-    font-family: sans-serif;
-    margin-left: 10vh;
-    margin-top: 3vh;
-}
-  
-.kombinimBCAA:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-  
-.kombinimiBCAA-front{
-    background: url(/images/proteins/bcaa-20-1-1.png);
-    background-position:center;
-    background-size: cover;
-    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
+.kombinimi-front img{
     width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border: 1px solid coral;
-    border-radius: 1rem;
-}
-
-
-  /** Creatine  **/
-
-.kombinimCreatina {
-    width: 290px;
-    height: 400px;
-    font-family: sans-serif;
-    margin-left: 10vh;
-    margin-top: 3vh;
-}
-  
-.kombinimCreatina:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-  
-.kombinimiCreatina-front{
-    background: url(/images/proteins/creatine-monohydrate-powder.png);
-    background-position:center;
-    background-size: cover;
-    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border: 1px solid coral;
-    border-radius: 1rem;
-}
-
-  /** Whey Complex  **/
-
-  .kombinimWhey {
-    width: 290px;
-    height: 400px;
-    font-family: sans-serif;
-    margin-left: 10vh;
-    margin-top: 3vh;
-}
-  
-.kombinimWhey:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-  
-.kombinimiWhey-front{
-    background: url(/images/proteins/complex_1800_optimized_6.png);
-    background-position:center;
-    background-size: cover;
-    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border: 1px solid coral;
-    border-radius: 1rem;
+    padding-bottom: 10%;
 }
