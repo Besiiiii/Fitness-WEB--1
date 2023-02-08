@@ -1,8 +1,17 @@
 <?php
-    session_start();
-    // Destroy session
-    if(session_destroy()) {
-        // Redirecting To Home Page
-        header("Location: login.php");
-    }
+session_start();
+session_unset();
+session_destroy();
+header('location:login.php');
+?>
+
+
+<?php
+//    session_start();
+//    session_destroy();
+//    session_unset($_SESSION['NAME']);
+//    session_unset($_SESSION['ROLE']);
+//    session_unset($_SESSION['ID']);
+//    header("Location:login.php");
+//    die();
 ?>

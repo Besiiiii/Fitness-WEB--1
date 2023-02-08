@@ -1,51 +1,113 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/style.css"/>
-</head>
-<body>
-<div class="form"> 
-        <p><a href="../index.html">Home</a> 
-        <a href="admin_login.php">Login as Admin</a> 
-
 <?php
-    require('db.php');
-    session_start();
-    // When form submitted, check and create user session.
-    if (isset($_POST['username'])) {
-        $username = stripslashes($_REQUEST['username']);    // removes backslashes
-        $username = mysqli_real_escape_string($con, $username);
-        $password = stripslashes($_REQUEST['password']);
-        $password = mysqli_real_escape_string($con, $password);
-        // Check user is exist in the database
-        $query    = "SELECT * FROM `users` WHERE username='$username'
-                     AND password='$password'";
-        $result = mysqli_query($con, $query) or die(mysql_error());
-        $rows = mysqli_num_rows($result);
-        if ($rows == 1) {
-            $_SESSION['username'] = $username;
-            // Redirect to user dashboard page
-            header("Location: message.php");
+session_start();
+if (isset($_SESSION['ID'])) {
+    header("Location:dashboard.php");
+    exit();
+}
+
+include_once('dbConnection.php');
+
+if (isset($_POST['submit'])) {
+
+    $errorMsg = "";
+
+    $username = $con->real_escape_string($_POST['username']);
+    $password = $con->real_escape_string(md5($_POST['password']));
+
+    if (!empty($username) || !empty($password)) {
+        $query  = "SELECT * FROM users WHERE username = '$username'";
+        $result = $con->query($query);
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $_SESSION['ID'] = $row['id'];
+            $_SESSION['ROLE'] = $row['role'];
+            $_SESSION['NAME'] = $row['name'];
+            header("Location:dashboard.php");
+            die();
         } else {
-            echo "<div class='form'>
-                  <h3>Incorrect Username/password.</h3><br/>
-                  <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
-                  </div>";
+            $errorMsg = "No user found on this username";
         }
     } else {
-?>
-    <form class="form" method="post" name="login">
-        <h1 class="login-title">Login</h1>
-        <input type="text" class="login-input" name="username" placeholder="Username" autofocus="true"/>
-        <input type="password" class="login-input" name="password" placeholder="Password"/>
-        <input type="submit" value="Login" name="submit" class="login-button"/>
-        <p class="link">Don't have an account? <a href="registration.php">Registration Now</a></p>
-  </form>
-<?php
+        $errorMsg = "Username and Password is required";
     }
+}
+
 ?>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/homebar_style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleRegister.css">
+
+</head>
+
+<body>
+<header>
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <img src="/images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
+                </a>
+                <div class="locations">
+                    <a href="https://goo.gl/maps/fbq2JgwbzG8FaQZX8">
+                    <h6>3BFitness</h6>
+                    <i class='bx bx-current-location'><h3>Gjakova</h3></i>
+                    </a>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="../index.html">
+                    <i class='bx bxs-home'></i>
+                    Home</a>
+                </li>
+                <li>
+                    <a href="workouts.html">
+                    <i class='bx bx-dumbbell' >
+                    </i>Workouts Plans</a>
+                </li>
+                <li>
+                    <a href="proteins.html">
+                        <i class='bx bxs-capsule' ></i>
+                        Proteins Combinations</a>
+                </li>
+            </ul>
+        </nav>
+        </header>
+
+    <div class="container">
+        <h3>Login</h3>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <?php if (isset($errorMsg)) { ?>
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <?php echo $errorMsg; ?>
+                    </div>
+                <?php } ?>
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" name="username" placeholder="Enter Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" name="password" placeholder="Enter Password">
+                    </div>
+                    <div class="form-group">
+                        <p>Not registered yet ?<a href="register.php"> Register here</a></p>
+                        <input type="submit" name="submit" class="btn btn-success" value="Login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

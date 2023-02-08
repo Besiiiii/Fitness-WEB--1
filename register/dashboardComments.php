@@ -5,7 +5,7 @@ session_start();
 include_once('config.php');
 
 if (!isset($_SESSION['ID'])) {
-    header("Location:login.php");
+    header("Location:dashboard.php");
     exit();
 }
 
@@ -22,7 +22,7 @@ if (!isset($_SESSION['ID'])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard</title>
+    <title>Dashboard - Comments</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
@@ -41,19 +41,13 @@ if (!isset($_SESSION['ID'])) {
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column" style="color: #5b5757;">
                         <li class="nav-item">
-                            <a class="nav-link active" href="../index.html">
+                            <a class="nav-link" href="dashboard.php">
                                 <span data-feather="home"></span>
-                                Home 
+                                Dashboard <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <?php if ($_SESSION['ROLE'] == 'super_admin') { ?>
-                        <h6>Catalog</h6>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="dashboard.php">
-                                    <span data-feather="home"></span>
-                                    Dashboard <span class="sr-only">(current)</span>
-                                </a>
-                            </li>
+                            <h6>Catalog</h6>
                             <li class="nav-item">
                                 <a class="nav-link" href="">
                                     <span data-feather="users"></span>
@@ -61,7 +55,7 @@ if (!isset($_SESSION['ID'])) {
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="dashboardComments.php">
+                                <a class="nav-link active" href="dashboardComments.php">
                                     <span data-feather="users"></span>
                                     Comments
                                 </a>
@@ -72,30 +66,26 @@ if (!isset($_SESSION['ID'])) {
             </nav>
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
-                    <h1 class="h2">Dashboard</h1>
+                    <h1 class="h2"> Dashboard - Comments </h1>
                 </div>
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Id</th>
+                                <th>Comment ID</th>
+                                <th>Parent Comment ID</th>
+                                <th>Comment</th>
                                 <th>Name</th>
-                                <th>Username</th>
-                                <th>Email</th>
-                                <th>Password</th>
-                                <th>Role</th>
-                                <th>Created</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Time of Comment Send</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
                             if ($_SESSION['ROLE'] == "super_admin") {
-                                $query = "SELECT * FROM admins";
+                                $query = "SELECT * FROM tbl_comment";
                             } else {
                                 $role = $_SESSION['ROLE'];
-                                $query = "SELECT * FROM admins WHERE role = '$role'";
+                                $query = "SELECT * FROM tbl_comment WHERE role = '$role'";
                             }
 
                             $result = $con->query($query);
@@ -104,15 +94,11 @@ if (!isset($_SESSION['ID'])) {
                             ?>
 
                                     <tr>
-                                        <td><?php echo $row['id'] ?></td>
-                                        <td><?php echo $row['name'] ?></td>
-                                        <td><?php echo $row['username'] ?></td>
-                                        <td><?php echo $row['email'] ?></td>
-                                        <td><?php echo $row['password'] ?></td>
-                                        <td><?php echo $row['role'] ?></td>
-                                        <td><?php echo date('d-M-Y', strtotime($row['created'])) ?></td>
-                                        <td><a href="edit.php?id=<?php echo $row["id"]; ?>">Edit</a></td>
-                                        <td><a href="delete.php?id=<?php echo $row["id"]; ?>">Delete</a></td>
+                                        <td><?php echo $row['comment_id'] ?></td>
+                                        <td><?php echo $row['parent_comment_id'] ?></td>
+                                        <td><?php echo $row['comment'] ?></td>
+                                        <td><?php echo $row['comment_sender_name'] ?></td>
+                                        <td><?php echo $row['comment_at'] ?></td>
                                     </tr>
 
                             <?php    }
