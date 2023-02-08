@@ -2,7 +2,7 @@
 
 session_start();
 // Include database connection file
-include_once('config.php');
+include_once('dbConnection.php');
 
 if (!isset($_SESSION['ID'])) {
     header("Location:dashboard.php");
@@ -37,17 +37,23 @@ if (!isset($_SESSION['ID'])) {
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-info sidebar" style="height: 569px">
+        <nav class="col-md-2 d-none d-md-block bg-info sidebar" style="height: 569px">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column" style="color: #5b5757;">
                         <li class="nav-item">
-                            <a class="nav-link" href="dashboard.php">
+                            <a class="nav-link active" href="../index.html">
                                 <span data-feather="home"></span>
-                                Dashboard <span class="sr-only">(current)</span>
+                                Home 
                             </a>
                         </li>
-                        <?php if ($_SESSION['ROLE'] == 'super_admin') { ?>
-                            <h6>Catalog</h6>
+                        <?php if ($_SESSION['ROLE'] == 'admin') { ?>
+                        <h6>Catalog</h6>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dashboard.php">
+                                    <span data-feather="home"></span>
+                                    Dashboard <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="">
                                     <span data-feather="users"></span>
@@ -81,7 +87,7 @@ if (!isset($_SESSION['ID'])) {
                         </thead>
                         <tbody>
                             <?php
-                            if ($_SESSION['ROLE'] == "super_admin") {
+                            if ($_SESSION['ROLE'] == "admin") {
                                 $query = "SELECT * FROM tbl_comment";
                             } else {
                                 $role = $_SESSION['ROLE'];

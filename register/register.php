@@ -1,8 +1,6 @@
 <?php
 
-// Include database connection file
-
-include_once('config.php');
+include_once('dbConnection.php');
 
 if (isset($_POST['submit'])) {
 
@@ -12,7 +10,7 @@ if (isset($_POST['submit'])) {
     $email = $con->real_escape_string($_POST['email']);
     $role = $con->real_escape_string($_POST['role']);
 
-    $query  = "INSERT INTO admins (name,username,email,password,role) VALUES ('$name','$username','$email','$password','$role')";
+    $query  = "INSERT INTO users (name,username,email,password,role) VALUES ('$name','$username','$email','$password','$role')";
     $result = $con->query($query);
 
     if ($result == true) {
@@ -33,8 +31,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/homebar_style.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/styleComment.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="../css/styleRegister.css">
 </head>
 <body>
 <header>
@@ -57,12 +54,12 @@ if (isset($_POST['submit'])) {
                     Home</a>
                 </li>
                 <li>
-                    <a href="workouts.html">
+                    <a href="../workouts.html">
                     <i class='bx bx-dumbbell' >
                     </i>Workouts Plans</a>
                 </li>
                 <li>
-                    <a href="proteins.html">
+                    <a href="../proteins.html">
                         <i class='bx bxs-capsule' ></i>
                         Proteins Combinations</a>
                 </li>
@@ -102,9 +99,8 @@ if (isset($_POST['submit'])) {
                         <label for="role">Role:</label>
                         <select class="form-control" name="role" required="">
                             <option value="">Select Role</option>
-                            <option value="super_admin">Super admin</option>
                             <option value="admin">Admin</option>
-                            <option value="manager">Manager</option>
+                            <option value="costumer">Costumer</option>
                         </select>
                     </div>
                     <div class="form-group">

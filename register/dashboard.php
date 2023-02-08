@@ -1,8 +1,7 @@
 <?php
 
 session_start();
-// Include database connection file
-include_once('config.php');
+include_once('dbConnection.php');
 
 if (!isset($_SESSION['ID'])) {
     header("Location:login.php");
@@ -46,7 +45,7 @@ if (!isset($_SESSION['ID'])) {
                                 Home 
                             </a>
                         </li>
-                        <?php if ($_SESSION['ROLE'] == 'super_admin') { ?>
+                        <?php if ($_SESSION['ROLE'] == 'admin') { ?>
                         <h6>Catalog</h6>
                             <li class="nav-item">
                                 <a class="nav-link active" href="dashboard.php">
@@ -91,11 +90,11 @@ if (!isset($_SESSION['ID'])) {
                         </thead>
                         <tbody>
                             <?php
-                            if ($_SESSION['ROLE'] == "super_admin") {
-                                $query = "SELECT * FROM admins";
+                            if ($_SESSION['ROLE'] == "admin") {
+                                $query = "SELECT * FROM users";
                             } else {
                                 $role = $_SESSION['ROLE'];
-                                $query = "SELECT * FROM admins WHERE role = '$role'";
+                                $query = "SELECT * FROM users WHERE role = '$role'";
                             }
 
                             $result = $con->query($query);
@@ -125,8 +124,6 @@ if (!isset($_SESSION['ID'])) {
             </main>
         </div>
     </div>
-    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         feather.replace();
     </script>
