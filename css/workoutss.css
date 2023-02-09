@@ -90,7 +90,7 @@ td:hover{
 
 
 .chest{
-    background: url(/images/chest.jpg);
+    background: url(../images/chest.jpg);
     background-position: center;
     border: 1px solid black;
     border-radius: 12px;
@@ -103,7 +103,7 @@ td:hover{
     align-items: flex-end;
 }
 .backsite{
-    background: url(/images/back.jpg);
+    background: url(../images/back.jpg);
     background-position: center;
     border: 1px solid black;
     border-radius: 12px;
@@ -116,7 +116,7 @@ td:hover{
     align-items: flex-end;
 }
 .trieceps{
-    background: url(/images/triceps.jpg);
+    background: url(../images/triceps.jpg);
     background-position: center;
     border: 1px solid black;
     border-radius: 12px;
@@ -129,7 +129,7 @@ td:hover{
     align-items: flex-end;
 }
 .biceps{
-    background: url(/images/biceps.jpg);
+    background: url(../images/biceps.jpg);
     background-position: center;
     border: 1px solid black;
     border-radius: 12px;
@@ -142,7 +142,7 @@ td:hover{
     align-items: flex-end;
 }
 .shoulder{
-    background: url(/images/shoulder.jpg);
+    background: url(../images/shoulder.jpg);
     background-position: center;
     border: 1px solid black;
     border-radius: 12px;
@@ -155,7 +155,7 @@ td:hover{
     align-items: flex-end;
 }
 .legs{
-    background: url(/images/legs.jpg);
+    background: url(../images/legs.jpg);
     background-position: center;
     border: 1px solid black;
     border-radius: 12px;
@@ -168,7 +168,7 @@ td:hover{
     align-items: flex-end;
 }
 .abs{
-    background: url(/images/abs.jpg);
+    background: url(../images/abs.jpg);
     background-position: center;
     border: 1px solid black;
     border-radius: 12px;

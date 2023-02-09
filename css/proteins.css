@@ -6,7 +6,7 @@ header{
     overflow: visible;
 }
 body{
-    background: url(/images/proteinsbg.jpg);
+    background: url(../images/proteinsbg.jpg);
     background-size:auto;
     background-repeat: no-repeat;
     margin: 0;
@@ -71,7 +71,7 @@ body{
 }
   
 .KombinimiGB-front {
-    background: url(/images/proteins/gain-bolic-3500-vanilia.png);
+    background: url(../images/proteins/gain-bolic-3500-vanilia.png);
     background-position:center;
     background-size: cover;
 }
