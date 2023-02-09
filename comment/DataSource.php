@@ -1,19 +1,7 @@
 <?php
-/**
- * Copyright (C) Phppot
- *
- * Distributed under 'The MIT License (MIT)'
- * In essense, you can do commercial use, modify, distribute and private use.
- * Though not mandatory, you are requested to attribute Phppot URL in your code or website.
- */
+
 namespace Phppot;
 
-/**
- * Generic datasource class for handling DB operations.
- * Uses MySqli and PreparedStatements.
- *
- * @version 2.6 - recordCount function added
- */
 class DataSource
 {
 
@@ -27,25 +15,12 @@ class DataSource
 
     private $conn;
 
-    /**
-     * PHP implicitly takes care of cleanup for default connection types.
-     * So no need to worry about closing the connection.
-     *
-     * Singletons not required in PHP as there is no
-     * concept of shared memory.
-     * Every object lives only for a request.
-     *
-     * Keeping things simple and that works!
-     */
     function __construct()
     {
         $this->conn = $this->getConnection();
     }
 
     /**
-     * If connection object is needed use this method and get access to it.
-     * Otherwise, use the below methods for insert / update / etc.
-     *
      * @return \mysqli
      */
     public function getConnection()
