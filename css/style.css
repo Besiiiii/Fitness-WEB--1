@@ -49,7 +49,7 @@ body{
 
 /** ----------------- Get Your Perfect Body -----------------------**/
 .perfectbody{
-    background: url(/images/IMG_0560.JPG);
+    background: url(../images/IMG_0560.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     height: 60vh;

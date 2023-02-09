@@ -50,12 +50,12 @@ if (!isset($_SESSION['ID'])) {
                     Home</a>
                 </li>
                 <li>
-                    <a href="workouts.html">
+                    <a href="../workouts.html">
                     <i class='bx bx-dumbbell' >
                     </i>Workouts Plans</a>
                 </li>
                 <li>
-                    <a href="proteins.html">
+                    <a href="../proteins.html">
                     <i class='bx bxs-capsule' ></i>
                     Proteins Combinations</a>
                 </li>
