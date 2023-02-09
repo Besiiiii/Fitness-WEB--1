@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
             </div>
             <ul>
                 <li>
-                    <a href="../index.html">
+                    <a href="../index.php">
                     <i class='bx bxs-home'></i>
                     Home</a>
                 </li>

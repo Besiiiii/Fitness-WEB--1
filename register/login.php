@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 <header>
         <nav>
             <div class="logo">
-                <a href="#">
+                <a href="../index.html">
                     <img src="/images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
                 </a>
                 <div class="locations">
