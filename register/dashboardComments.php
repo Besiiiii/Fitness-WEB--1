@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-// Include database connection file
 include_once('dbConnection.php');
 
 if (!isset($_SESSION['ID'])) {
@@ -23,59 +22,56 @@ if (!isset($_SESSION['ID'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard - Comments</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/dashboardStyle.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-info sticky-top bg-info flex-md-nowrap p-10">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="" style="color: #5b5757;"><b>3BFitness</b></a>
-        <ul class="navbar-nav px-3">
-            <li class="nav-item text-nowrap">
-                <a class="nav-link" href="logout.php">Hi, <?php echo ucwords($_SESSION['NAME']); ?> Log out</a>
+<nav class="navbari">
+        <a class="name" href="#"><b>3BFitness</b></a>
+        <ul>
+            <li>
+                <a href="logout.php">Hi,  <?php echo ucwords($_SESSION['NAME']); ?>  - Log out</a>
             </li>
         </ul>
     </nav>
     <div class="container-fluid">
-        <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-info sidebar" style="height: 569px">
-                <div class="sidebar-sticky">
-                    <ul class="nav flex-column" style="color: #5b5757;">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="../index.html">
-                                <span data-feather="home"></span>
-                                Home 
-                            </a>
-                        </li>
-                        <?php if ($_SESSION['ROLE'] == 'admin') { ?>
+    <div>
+            <nav class="sidebar">
+                <div class="sidebar">
+                    <ul>
+                        <li>
+                        <a href="../index.html">
+                            <span data-feather="home"></span>
+                            Home 
+                        </a>
+                    </li>
+                    <?php if ($_SESSION['ROLE'] == 'admin') { ?>
                         <h6>Catalog</h6>
-                            <li class="nav-item">
-                                <a class="nav-link" href="dashboard.php">
-                                    <span data-feather="home"></span>
-                                    Dashboard <span class="sr-only">(current)</span>
-                                </a>
+                            <li>
+                                <a href="dashboard.php">
+                                <span data-feather="users"></span>
+                                Dashboard</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    <span data-feather="users"></span>
-                                    Products
-                                </a>
+                            <li>
+                                <a href="proteins_products.php">
+                                <span data-feather="users"></span>
+                                Products</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="dashboardComments.php">
-                                    <span data-feather="users"></span>
-                                    Comments
-                                </a>
+                            <li>
+                                <a class="active" href="dashboardComments.php">
+                                <span data-feather="users"></span>
+                                    Comments</a>
                             </li>
                         <?php } ?>
                     </ul>
                 </div>
             </nav>
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
-                    <h1 class="h2"> Dashboard - Comments </h1>
+            <main role="main">
+                <div>
+                    <h1> Dashboard - Comments </h1>
                 </div>
-                <div class="table-responsive">
-                    <table class="table table-striped">
+                <div>
+                    <table>
                         <thead>
                             <tr>
                                 <th>Comment ID</th>
