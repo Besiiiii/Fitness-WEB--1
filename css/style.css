@@ -103,6 +103,7 @@ body{
     background: #f5d714;
     box-shadow:  16px 16px 32px #f3db4156,
                 -16px -16px 32px #ffed473a;
+    text-align: center;
 }
 .pagesat label{
     font-size: 28px;
