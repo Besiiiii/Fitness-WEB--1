@@ -43,7 +43,7 @@ if (!isset($_SESSION['ID'])) {
                         <?php if ($_SESSION['ROLE'] == 'admin') { ?>
                             <li >
                                 <a href="dashboard.php" class="active">
-                                    <span data-feather="home"></span>
+                                    <span data-feather="users"></span>
                                     Dashboard <span></span>
                                 </a>
                             </li>
