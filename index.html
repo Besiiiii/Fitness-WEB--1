@@ -14,33 +14,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <title>3B Fitness</title>
-
-    <style>
-
-    .perfectbody{
-        background: url(./images/IMG_0560.JPG);
-        background-size: cover;
-    }
-
-    .aboutus{
-        background: url(./images/background.jpg);
-    }
-    .aboutus .fotoAU {
-        background: url(./images/about-us.jpg);
-        background-size: cover;
-    }
-    .whyus{
-    background: url(./images/background_h.png);
-    background-size: cover;  
-    }
-    .whyus .fotoWU {
-    background: url(./images/why-us.jpg);
-    background-size: cover;
-    }
-
-
-    </style>
-
 </head>
 
 <body>
@@ -92,7 +65,7 @@
    <!-- ---------------------- Comments ------------------------ -->
     <div class="login_system" id="login-system">
         <ul class="login">
-        <li><a href="comment/comment.php" class="login_text">
+        <li><a href="./comment/comment.php" class="login_text">
             <i class='bx bxs-message-add' ></i>
             Leave a Comment</a>
         </li>
@@ -160,6 +133,55 @@
             
     </div>
 
+    <!-- -----------------------------Slider Pictures ------------------------ -->
+
+    <div class="image-slider">
+        <h2>-Vendi i ushtrimeve-</h2>
+
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <img src="./images/slider/IMG_0596.JPG" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="./images/slider/IMG_0597.JPG" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="./images/slider/IMG_0598.JPG" style="width:100%">
+    </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+    </div>
+        </div>
+            <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 3500); // Change image every 3.5 seconds
+                }
+            </script>
     
     
     <!-- ---------------------------Footer Bar -------------------------- -->

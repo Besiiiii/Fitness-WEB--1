@@ -126,7 +126,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: url(/images/background.jpg);
+    background: url(../images/background.jpg);
     background-size: cover;
     width: 100%;
     height: fit-content;
@@ -159,7 +159,7 @@ body{
     margin-left: 1vh;
     margin-right: 7vh;
     border-radius: 25px;
-    background: url(/images/about-us.jpg);
+    background: url(../images/about-us.jpg);
     background-size: cover;
     box-shadow:  16px 16px 32px #242424e7,
                 -16px -16px 32px #9190909d;
@@ -173,7 +173,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: url(/images/background_h.png);
+    background: url(../images/background_h.png);
     border-top: #222020 2px solid;
     background-size: cover;
     width: 100%;
@@ -201,11 +201,54 @@ body{
     height: 480px;
     margin: 5vh 4vh 5vh;
     border-radius: 25px;
-    background: url(/images/why-us.jpg);
+    background: url(../images/why-us.jpg);
     background-size: cover;
     box-shadow:  16px 16px 32px #242424e7,
                 -16px -16px 32px #9190909d;
 }
+/* ---------------------------------- Photo Slider ----------------------------- */
+.mySlides {
+    display: none;
+}
+.image-slider{
+    background: url(../images/background.jpg);
+    border-top: 2px solid #222020;
+}
+.image-slider h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+img {
+    border-radius: 30px;
+    vertical-align: middle;
+    height: 540px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .7} 
+  to {opacity: 1}
+}
+
+
 
 @media screen and (max-width: 550px ) {
 
