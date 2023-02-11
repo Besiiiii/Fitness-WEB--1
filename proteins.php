@@ -137,8 +137,125 @@
                         </div>
                     </div>
                    </div>
+
+
+                   <div class="kombinim">
+                    <div class="flip-card-inner">
+                        <div class="kombinimi-front">
+                            <img src="./images/proteins/knockout.png" alt="Knockout" id="product_image">
+                            <p class="title" id="product_name">Knockout 2.0</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title" id="product_info">Knockout 2.0 është një përforcues stërvitje me 
+                                një formulë të bazuar në doza të zgjedhura saktësisht të substancave thelbësore <br> që rrisin aftësitë tuaja të stërvitjes.</p>
+                        </div>
+                    </div>
+                   </div>
+                   
+                   <div class="kombinim">
+                    <div class="flip-card-inner">
+                        <div class="kombinimi-front">
+                            <img src="./images/proteins/blackweiler.png" alt="Blackweiler" id="product_image">
+                            <p class="title" id="product_name">Blackweiler Shred</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title" id="product_info">Produkti është një përbërje e aminoacideve 
+                                (beta-alanine, L-arginine dhe L-citrulline), ekstrakte bimore 
+                                (wasabi, kakao, xhenxhefil, çaj jeshil, piper i zi dhe piper i kuq) 
+                                dhe kafeinë, e plotësuar gjithashtu me vitamina dhe minerale.</p>
+                        </div>
+                    </div>
+                   </div>                  
+                   
+                   <div class="kombinim">
+                    <div class="flip-card-inner">
+                        <div class="kombinimi-front">
+                            <img src="./images/proteins/salmon.png" alt="Gold Salmon" id="product_image">
+                            <p class="title" id="product_name">Gold Salmon</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title" id="product_info">Gold Salmon 12000 Amino Mega Tabs® është hidroliza i proteinës së salmonit të 
+                                Atlantikut të Veriut me cilësi më të lartë (SPH, ProGo™), 
+                                duke siguruar aminoacide të absorbueshme menjëherë me një profil optimal.</p>
+                        </div>
+                    </div>
+                   </div>                   
+                   
+                   <div class="kombinim">
+                    <div class="flip-card-inner">
+                        <div class="kombinimi-front">
+                            <img src="./images/proteins/redweiler.png" alt="Redweiler" id="product_image">
+                            <p class="title" id="product_name">Redweiler</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title" id="product_info">Redweiler është një shembull i përsosur! 
+                                Është një suplement revolucionar para stërvitjes që do t'ju lejojë të kryeni një stërvitje specifike me "shpejtësi të plotë",
+                                 duke reduktuar, për shkak të pranisë së vitaminës B6, simptomat e rritjes së lodhjes.</p>
+                        </div>
+                    </div>
+                   </div>                   
+                   
+                   <div class="kombinim">
+                    <div class="flip-card-inner">
+                        <div class="kombinimi-front">
+                            <img src="./images/proteins/micellar.png" alt="Micellar Casein" id="product_image">
+                            <p class="title" id="product_name">Micellar Casein</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title" id="product_info">Kazeina Micellare është një proteinë e përsosur e natës,
+                                 e cila mbron trupin nga efekti shkatërrues i urisë gjatë orëve të gjumit,
+                                 duke siguruar furnizim të vazhdueshëm dhe rigjenerues të aminoacideve gjatë kësaj kohe.</p>
+                        </div>
+                    </div>
+                   </div>
+                   
+
+                   <div class="kombinim">
+                    <div class="flip-card-inner">
+                        <div class="kombinimi-front">
+                            <img src="./images/proteins/flex.png" alt="Flex Xplode" id="product_image">
+                            <p class="title" id="product_name">Flex Xplode</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title" id="product_info">Cilësia më e lartë e Flex Xplode është forca e tij më e madhe. Përbërësit aktivë të standardizuar, 
+                                kombinimi unik i substancave aktive dhe shija e shijshme do të kënaqin të gjithë ata që zgjedhin këtë produkt.</p>
+                        </div>
+                    </div>
+                   </div>
+
+
+                   <div class="kombinim">
+                    <div class="flip-card-inner">
+                        <div class="kombinimi-front">
+                            <img src="./images/proteins/collaregen.png" alt="Collaregen" id="product_image">
+                            <p class="title" id="product_name">Collaregen</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title" id="product_info">Kolagjeni në sasi të demonstruara në studimet klinike. 
+                                Rezultatet e studimit klinik (1,2) tregojnë se marrja ditore e 10 g të hidrolizatit 
+                                të kolagjenit të shkallës farmaceutike redukton dhimbjen te pacientët me osteoporozë të ijeve ose të gjurit.</p>
+                        </div>
+                    </div>
+                   </div>
+
+
+                   <div class="kombinim">
+                    <div class="flip-card-inner">
+                        <div class="kombinimi-front">
+                            <img src="./images/proteins/carbonox.png" alt="Carbonox" id="product_image">
+                            <p class="title" id="product_name">Carbonox</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title" id="product_info">Carbonox bazohet në burime të përpiluara me kujdes të karbohidrateve 
+                                të zgjedhura sipas profileve të përcaktuara saktësisht të shkallës së tretjes dhe lëshimit 
+                                të monosakarideve në qarkullimin e gjakut.</p>
+                        </div>
+                    </div>
+                   </div>
+                   
                 </div>
             </div>
     </main>
+                </br>
 </body>
 </html>

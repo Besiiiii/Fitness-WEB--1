@@ -25,13 +25,15 @@ if (!isset($_SESSION['ID'])) {
     <title>Dashboard - Comments</title>
     <link rel="stylesheet" href="../css/homebar_style.css">
     <link rel="stylesheet" href="../css/dashboardStyle.css">
+    <!-- ------------------------- Icons CSS --------------------------- -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-    <header>
-        <nav class="sidebar">
+<header>
+        <nav>
             <div class="logo">
-                <a href="#">
+                <a href="index.php">
                     <img src="../images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
                 </a>
                 <div class="locations">
@@ -41,30 +43,27 @@ if (!isset($_SESSION['ID'])) {
                     </a>
                 </div>
             </div>
-            <ul> 
+            <ul>
                 <li>
-                    <a href="../index.html">
-                    <span data-feather="home"></span>
+                    <a href="../index.php">
+                    <i class='bx bxs-home'></i>
                     Home </a>
                 </li>
                 <?php if ($_SESSION['ROLE'] == 'admin') { ?>
                 <li>
                     <a href="dashboard.php">
-                    <span data-feather="users"></span>
+                    <i class='bx bxs-dashboard'></i>
                     Dashboard</a>
                 </li>
                 <li>
-                    <a href="proteins_products.php">
-                    <span data-feather="users"></span>
-                    Products</a>
-                </li>
-                <li>
                     <a class="active" href="dashboardComments.php">
-                    <span data-feather="users"></span>
+                    <i class='bx bxs-dashboard'></i>
                     Comments</a>
                 </li>
                 <li>
-                    <a href="logout.php">Hi,  <?php echo ucwords($_SESSION['NAME']); ?>  - Log out</a>
+                    <a href="logout.php">
+                    <i class='bx bxs-log-out'></i>
+                    Hi,  <?php echo ucwords($_SESSION['NAME']); ?>  - Log out</a>
                 </li>
                 <?php } ?>
             </ul>

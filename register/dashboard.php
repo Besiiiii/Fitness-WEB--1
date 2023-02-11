@@ -18,6 +18,8 @@ if (!isset($_SESSION['ID'])) {
     <title>Dashboard</title>
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="stylesheet" href="../css/homebar_style.css">
+    <!-- ------------------------- Icons CSS --------------------------- -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -35,29 +37,26 @@ if (!isset($_SESSION['ID'])) {
                 </div>
             </div>
             <ul>
-                <li>
+            <li>
                     <a href="../index.php">
-                    <span data-feather="home"></span>
-                    Home</a>
+                    <i class='bx bxs-home'></i>
+                    Home </a>
                 </li>
                 <?php if ($_SESSION['ROLE'] == 'admin') { ?>
-                <li >
-                    <a href="dashboard.php" class="active">
-                    <span data-feather="users"></span>
+                <li>
+                    <a class="active" href="dashboard.php">
+                    <i class='bx bxs-dashboard'></i>
                     Dashboard</a>
                 </li>
                 <li>
-                    <a href="proteins_products.php">
-                    <span data-feather="users"></span>
-                    Products</a>
-                </li>
-                <li>
                     <a href="dashboardComments.php">
-                    <span data-feather="users"></span>
+                    <i class='bx bxs-dashboard'></i>
                     Comments</a>
                 </li>
                 <li>
-                    <a href="logout.php">Hi,  <?php echo ucwords($_SESSION['NAME']); ?>  - Log out</a>
+                    <a href="logout.php">
+                    <i class='bx bxs-log-out'></i>
+                    Hi,  <?php echo ucwords($_SESSION['NAME']); ?>  - Log out</a>
                 </li>
                 <?php } ?>
             </ul>

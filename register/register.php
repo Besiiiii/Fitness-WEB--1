@@ -28,17 +28,19 @@ if (isset($_POST['submit'])) {
     <title>Register</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="../css/homebar_style.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleRegister.css">
+    <!-- ------------------------- Icons CSS --------------------------- -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 <header>
         <nav>
             <div class="logo">
-                <a href="#">
-                    <img src="/images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
+                <a href="../index.php">
+                    <img src="../images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
                 </a>
                 <div class="locations">
                     <a href="https://goo.gl/maps/fbq2JgwbzG8FaQZX8">
@@ -54,12 +56,12 @@ if (isset($_POST['submit'])) {
                     Home</a>
                 </li>
                 <li>
-                    <a href="../workouts.html">
+                    <a href="../workouts.php">
                     <i class='bx bx-dumbbell' >
                     </i>Workouts Plans</a>
                 </li>
                 <li>
-                    <a href="../proteins.html">
+                    <a href="../proteins.php">
                         <i class='bx bxs-capsule' ></i>
                         Proteins Combinations</a>
                 </li>

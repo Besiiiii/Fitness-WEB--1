@@ -29,7 +29,7 @@
         <nav>
             <div class="logo">
                 <a href="index.php">
-                    <img src="../images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
+                    <img src="./images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
                 </a>
                 <div class="locations">
                     <a href="https://goo.gl/maps/fbq2JgwbzG8FaQZX8">
@@ -45,13 +45,13 @@
                     Home</a>
                 </li>
                 <li>
-                    <a href="workouts.php">
+                    <a href="workouts.html">
                     <i class='bx bx-dumbbell' >
                     </i>Workouts Plans</a>
                 </li>
                 <li>
                     <a href="proteins.php">
-                        <i class='bx bxs-capsule' ></i>
+                    <i class='bx bxs-capsule' ></i>
                         Proteins Combinations</a>
                 </li>
                 <?php if ($_SESSION['NAME'] == '') { ?>
@@ -69,7 +69,7 @@
                 <li>
                 <?php if ($_SESSION['ROLE'] == 'admin') { ?>
                     <a href="register/dashboard.php">
-                    <span data-feather="users"></span>
+                    <i class='bx bxs-dashboard'></i>
                     Dashboard</a>
                 </li>
                     <?php } ?>
