@@ -29,7 +29,7 @@
         <nav>
             <div class="logo">
                 <a href="index.php">
-                    <img src="./images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
+                    <img src="../images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
                 </a>
                 <div class="locations">
                     <a href="https://goo.gl/maps/fbq2JgwbzG8FaQZX8">
