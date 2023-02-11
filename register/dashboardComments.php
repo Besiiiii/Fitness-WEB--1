@@ -25,6 +25,9 @@ if (!isset($_SESSION['ID'])) {
     <title>Dashboard - Comments</title>
     <link rel="stylesheet" href="../css/homebar_style.css">
     <link rel="stylesheet" href="../css/dashboardStyle.css">
+    <!-- ------------------------- Icons CSS --------------------------- -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
 
 <body>
@@ -43,7 +46,7 @@ if (!isset($_SESSION['ID'])) {
             </div>
             <ul> 
                 <li>
-                    <a href="../index.html">
+                    <a href="../index.php">
                     <span data-feather="home"></span>
                     Home </a>
                 </li>

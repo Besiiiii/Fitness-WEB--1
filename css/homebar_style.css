@@ -57,7 +57,7 @@ nav ul li{
 
 nav ul li a{
     width: 100%;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 500;
     padding: 5px 10px;
     border-radius: 5px;
@@ -69,7 +69,7 @@ nav ul li a{
 
 nav ul li a:hover {
     border:2px solid #fcfa7c;
-    color: #fff;
+    
 }
 .btn-active{
     color: #fcfa7c;
@@ -83,12 +83,12 @@ nav ul li a:hover {
     margin-top: 4px;
 }
 .locations h6{
-    font-size: 25px;
+    font-size: 22px;
 }
 .locations i{
     font-size: 12px;
     display: flex;
-    align-items: center;
-    margin-left: -34px;
+    align-items:flex-start;
+    
 }
 

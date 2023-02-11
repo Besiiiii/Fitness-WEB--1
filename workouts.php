@@ -53,7 +53,7 @@
                 <li>
                     <a href="proteins.php">
                         <i class='bx bxs-capsule' ></i>
-                        Proteins Combinations</a>
+                        Proteins</a>
                 </li>
                 <?php if ($_SESSION['NAME'] == '') { ?>
                 <li>

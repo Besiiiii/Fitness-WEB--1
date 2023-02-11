@@ -34,7 +34,7 @@ if (!isset($_SESSION['ID'])) {
         <nav>
             <div class="logo">
                 <a href="../index.html">
-                    <img src="/images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
+                    <img src="../images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
                 </a>
                 <div class="locations">
                     <a href="https://goo.gl/maps/fbq2JgwbzG8FaQZX8">
@@ -45,17 +45,17 @@ if (!isset($_SESSION['ID'])) {
             </div>
             <ul>
                 <li>
-                    <a href="../index.html">
+                    <a href="../index.php">
                     <i class='bx bxs-home'></i>
                     Home</a>
                 </li>
                 <li>
-                    <a href="../workouts.html">
+                    <a href="../workouts.php">
                     <i class='bx bx-dumbbell' >
                     </i>Workouts Plans</a>
                 </li>
                 <li>
-                    <a href="../proteins.html">
+                    <a href="../proteins.php">
                     <i class='bx bxs-capsule' ></i>
                     Proteins Combinations</a>
                 </li>
