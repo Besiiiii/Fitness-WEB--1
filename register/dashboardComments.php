@@ -27,6 +27,10 @@ if (!isset($_SESSION['ID'])) {
     <link rel="stylesheet" href="../css/dashboardStyle.css">
     <!-- ------------------------- Icons CSS --------------------------- -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 38b96230ace34ff7d1c55d1b971c15a0d6eabe4c
 </head>
 
 <body>
@@ -46,7 +50,11 @@ if (!isset($_SESSION['ID'])) {
             <ul>
                 <li>
                     <a href="../index.php">
+<<<<<<< HEAD
                     <i class='bx bxs-home'></i>
+=======
+                    <span data-feather="home"></span>
+>>>>>>> 38b96230ace34ff7d1c55d1b971c15a0d6eabe4c
                     Home </a>
                 </li>
                 <?php if ($_SESSION['ROLE'] == 'admin') { ?>

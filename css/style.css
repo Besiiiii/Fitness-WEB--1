@@ -220,7 +220,7 @@ body{
     font-size: 40px;
 }
 
-img {
+.mySlides img {
     border-radius: 30px;
     vertical-align: middle;
     height: 540px;
@@ -231,11 +231,6 @@ img {
   max-width: 1000px;
   position: relative;
   margin: auto;
-}
-
-
-.active {
-  background-color: #717171;
 }
 
 /* Fading animation */
@@ -381,6 +376,16 @@ img {
         min-width: 85%;
         height: 30vh;
         margin-left: 3vh;
+        margin-bottom: 50px;
+    }
+
+    /* ------------------ Slider Photos -----------------------*/
+    .image-slider h2{
+        font-size: 20px;
+    }
+    .mySlides img {
+        padding: 0 5px 0;
+        height: 30vh;
         margin-bottom: 50px;
     }
     

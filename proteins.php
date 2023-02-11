@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./css/proteins.css">
     <!-- ------------------------- Icons CSS --------------------------- -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 
     <title>Proteins Combinations</title>
 </head>
@@ -45,14 +46,14 @@
                     Home</a>
                 </li>
                 <li>
-                    <a href="workouts.html">
+                    <a href="workouts.php">
                     <i class='bx bx-dumbbell' >
                     </i>Workouts Plans</a>
                 </li>
                 <li>
                     <a class="btn-active" href="proteins.php">
                     <i class='bx bxs-capsule' ></i>
-                        Proteins Combinations</a>
+                        Proteins</a>
                 </li>
                 <?php if ($_SESSION['NAME'] == '') { ?>
                 <li>
