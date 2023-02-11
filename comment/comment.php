@@ -67,8 +67,7 @@ if (!isset($_SESSION['ID'])) {
             </ul>
         </nav>
         </header>
-
-	<h1>Leave a Comment</h1>
+	<h1 >Leave a Comment</h1>
 	<div class="comment-form-container">
 		<form id="frm-comment">
 			<div class="input-row">

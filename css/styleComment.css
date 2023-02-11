@@ -1,6 +1,8 @@
 body {
 	font-family: Arial;
     background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -108,95 +110,4 @@ span.posted-by {
 	padding: 0 0 4px 0;
 }
 
-/*------------------------ Home Bar CSS ----------------------------------*/
-/*------------------------ Google Fonts - Poppins ------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-header nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0 10%;
-    background-color: #222020;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo {
-    display: flex;
-    gap: 6px;
-}
-.logo a {
-    text-decoration: none;
-    font-size: 26px;
-    font-weight: 600;
-    color: #fff;
-}
-.logoimg{
-    width: 55px;
-    height: 55px;
-    border-radius: 35px;
-    background: lightgrey;
-    margin-top: 5px;
-}
-
-nav ul {
-    display: flex;
-    gap: 20px;
-    flex-flow: row wrap;
-    list-style-type: none;
-    width: fit-content;
-    
-}
-
-nav ul li{
-    width: fit-content;
-    line-height: 60px;
-}
-
-
-nav ul li a{
-    width: 100%;
-    font-size: 19px;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color .3s linear;
-    
-}
-
-nav ul li a:hover {
-    border:2px solid #fcfa7c;
-    color: #fff;
-}
-
-.locations a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    margin-top: 4px;
-}
-.locations h6{
-    font-size: 25px;
-}
-.locations i{
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    margin-left: -34px;
-}
 
