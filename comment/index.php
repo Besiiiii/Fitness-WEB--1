@@ -4,7 +4,7 @@ session_start();
 // Include database connection file
 
 if (!isset($_SESSION['ID'])) {
-    header("Location:login.php");
+    header("Location:../register/login.php");
     exit();
 }
 ?>
@@ -33,8 +33,8 @@ if (!isset($_SESSION['ID'])) {
 <header>
         <nav>
             <div class="logo">
-                <a href="../index.html">
-                    <img src="/images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
+                <a href="index.php">
+                    <img src="../images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
                 </a>
                 <div class="locations">
                     <a href="https://goo.gl/maps/fbq2JgwbzG8FaQZX8">
@@ -45,28 +45,47 @@ if (!isset($_SESSION['ID'])) {
             </div>
             <ul>
                 <li>
-                    <a href="../index.html">
+                    <a class="btn-active" href="../index.php">
                     <i class='bx bxs-home'></i>
                     Home</a>
                 </li>
                 <li>
-                    <a href="workouts.html">
+                    <a href="../workouts.php">
                     <i class='bx bx-dumbbell' >
                     </i>Workouts Plans</a>
                 </li>
                 <li>
-                    <a href="proteins.html">
-                    <i class='bx bxs-capsule' ></i>
-                    Proteins Combinations</a>
+                    <a href="../proteins.php">
+                        <i class='bx bxs-capsule' ></i>
+                        Proteins Combinations</a>
+                </li>
+                <?php if ($_SESSION['NAME'] == '') { ?>
+                <li>
+                    <a href="../register/login.php" >
+                    <i class='bx bx-log-in'></i>
+                    Log In</a>
                 </li>
                 <li>
-                <a class="nav-link" href="../register/logout.php">Hi, 
-                    <?php echo ucwords($_SESSION['NAME']); ?> 
-                    Log out</a>
+                    <a href="../register/register.php" >
+                    <i class='bx bx-user-plus'></i>
+                    Register</a>
+                </li>
+                <?php } ?>
+                <li>
+                <?php if ($_SESSION['ROLE'] == 'admin') { ?>
+                    <a href="../register/dashboard.php">
+                    <span data-feather="users"></span>
+                    Dashboard</a>
+                </li>
+                    <?php } ?>
+                <li>
+                    <a href="../register/logout.php">
+                    <i class='bx bx-log-out' ></i>
+                    Hi,  <?php echo ucwords($_SESSION['NAME']); ?>  - Log out</a>
                 </li>
             </ul>
         </nav>
-        </header>
+    </header>
 
 	<h1>Leave a Comment</h1>
 	<div class="comment-form-container">

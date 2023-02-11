@@ -91,13 +91,13 @@ $row = mysqli_fetch_assoc($result); //return an associative array representing t
                 </li>
                 <li>
                 <?php if ($_SESSION['ROLE'] == 'admin') { ?>
-                    <a href="register/dashboard.php">
+                    <a href="dashboard.php">
                     <span data-feather="users"></span>
                     Dashboard</a>
                 </li>
                     <?php } ?>
                 <li>
-                    <a href="register/logout.php">
+                    <a href="logout.php">
                     <i class='bx bx-log-out' ></i>
                     Hi,  <?php echo ucwords($_SESSION['NAME']); ?>  - Log out</a>
                 </li>
