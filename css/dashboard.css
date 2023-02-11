@@ -10,20 +10,20 @@ body{
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.navbari{
+/* .navbari{
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     background-color: #2d3436;
     padding: 2vh 7vh 3vh;
-}
-.navbari a {
+} */
+/* .navbari a {
     color: #fff;
     font-size: 20px;
 }
 .navbari li a {
     text-decoration:underline;
-}
+} */
 a{
     text-decoration: none;
 }
@@ -31,34 +31,28 @@ ul li {
     list-style-type: none;
 }
 .sidebar{
-    height: 100%;
-    width: 260px;
-    font-size: 20px;
-    padding: 10px 10px;
+    width: 100%;
 }
-.sidebar ul{
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-}
-.sidebar a {
-    color: #2d3436;
-    /* border: 1px solid #2d3436; */
-    /* background-color: #1116; */
-    padding: 5px;
-}
+
 .sidebar a:hover{
-    color: #0105ff;
+    color: #fcfa7c;
 }
 .sidebar .active{
-    color: #0105ff;
+    color: #fcfa7c;
 }
 main{
-    position: fixed;
+    /* position: fixed; */
     top: 15vh;
-    right: 15vh;
+    /* right: 15vh;
     background: #f1c40f;
-    border: 1px solid #7f8c8d;
+    border: 1px solid #7f8c8d; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+h1{
     text-align: center;
 }
 table{

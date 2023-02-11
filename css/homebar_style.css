@@ -71,7 +71,9 @@ nav ul li a:hover {
     border:2px solid #fcfa7c;
     color: #fff;
 }
-
+.btn-active{
+    color: #fcfa7c;
+}
 .locations a{
     display: flex;
     flex-direction: column;

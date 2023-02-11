@@ -34,7 +34,7 @@ $row = mysqli_fetch_assoc($result); //return an associative array representing t
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,21 +43,28 @@ $row = mysqli_fetch_assoc($result); //return an associative array representing t
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/homebar_style.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/styleComment.css">
+    <link rel="stylesheet" href="../css/styleRegister.css">
     <!-- ------------------------- Icons CSS --------------------------- -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <script src="jquery-3.2.1.min.js"></script>
     <title>Comment</title>
 
-</head>
+  </head>
 
 <body>
-<header>
+<?php
+    session_start();
+    if (!isset($_SESSION['ID'])) {
+        header("Location:login.php");
+        exit();
+    }
+?>
+   <header>
         <nav>
             <div class="logo">
-                <a href="#">
-                    <img src="/images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
+                <a href="index.php">
+                    <img src="../images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
                 </a>
                 <div class="locations">
                     <a href="https://goo.gl/maps/fbq2JgwbzG8FaQZX8">
@@ -68,23 +75,35 @@ $row = mysqli_fetch_assoc($result); //return an associative array representing t
             </div>
             <ul>
                 <li>
-                    <a href="../index.html">
+                    <a href="index.php">
                     <i class='bx bxs-home'></i>
                     Home</a>
                 </li>
                 <li>
-                    <a href="workouts.html">
+                    <a href="workouts.php">
                     <i class='bx bx-dumbbell' >
                     </i>Workouts Plans</a>
                 </li>
                 <li>
-                    <a href="proteins.html">
+                    <a href="proteins.php">
                         <i class='bx bxs-capsule' ></i>
                         Proteins Combinations</a>
                 </li>
+                <li>
+                <?php if ($_SESSION['ROLE'] == 'admin') { ?>
+                    <a href="register/dashboard.php">
+                    <span data-feather="users"></span>
+                    Dashboard</a>
+                </li>
+                    <?php } ?>
+                <li>
+                    <a href="register/logout.php">
+                    <i class='bx bx-log-out' ></i>
+                    Hi,  <?php echo ucwords($_SESSION['NAME']); ?>  - Log out</a>
+                </li>
             </ul>
         </nav>
-        </header>
+    </header>
 
         <div class="container">
           <h3>Update Users</h3>

@@ -15,63 +15,67 @@ if (!isset($_SESSION['ID'])) {
         font-size: 14px;
     }
 </style>
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard - Comments</title>
+    <link rel="stylesheet" href="../css/homebar_style.css">
     <link rel="stylesheet" href="../css/dashboardStyle.css">
 </head>
 
 <body>
-<nav class="navbari">
-        <a class="name" href="#"><b>3BFitness</b></a>
-        <ul>
-            <li>
-                <a href="logout.php">Hi,  <?php echo ucwords($_SESSION['NAME']); ?>  - Log out</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="container-fluid">
-    <div>
-            <nav class="sidebar">
-                <div class="sidebar">
-                    <ul>
-                        <li>
-                        <a href="../index.html">
-                            <span data-feather="home"></span>
-                            Home 
-                        </a>
-                    </li>
-                    <?php if ($_SESSION['ROLE'] == 'admin') { ?>
-                        <h6>Catalog</h6>
-                            <li>
-                                <a href="dashboard.php">
-                                <span data-feather="users"></span>
-                                Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="proteins_products.php">
-                                <span data-feather="users"></span>
-                                Products</a>
-                            </li>
-                            <li>
-                                <a class="active" href="dashboardComments.php">
-                                <span data-feather="users"></span>
-                                    Comments</a>
-                            </li>
-                        <?php } ?>
-                    </ul>
+    <header>
+        <nav class="sidebar">
+            <div class="logo">
+                <a href="#">
+                    <img src="../images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
+                </a>
+                <div class="locations">
+                    <a href="https://goo.gl/maps/fbq2JgwbzG8FaQZX8">
+                    <h6>3BFitness</h6>
+                    <i class='bx bx-current-location'><h3>Gjakova</h3></i>
+                    </a>
                 </div>
-            </nav>
+            </div>
+            <ul> 
+                <li>
+                    <a href="../index.html">
+                    <span data-feather="home"></span>
+                    Home </a>
+                </li>
+                <?php if ($_SESSION['ROLE'] == 'admin') { ?>
+                <li>
+                    <a href="dashboard.php">
+                    <span data-feather="users"></span>
+                    Dashboard</a>
+                </li>
+                <li>
+                    <a href="proteins_products.php">
+                    <span data-feather="users"></span>
+                    Products</a>
+                </li>
+                <li>
+                    <a class="active" href="dashboardComments.php">
+                    <span data-feather="users"></span>
+                    Comments</a>
+                </li>
+                <li>
+                    <a href="logout.php">Hi,  <?php echo ucwords($_SESSION['NAME']); ?>  - Log out</a>
+                </li>
+                <?php } ?>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div>
             <main role="main">
                 <div>
-                    <h1> Dashboard - Comments </h1>
-                </div>
-                <div>
                     <table>
+                        <h1> Dashboard - Comments </h1>
                         <thead>
                             <tr>
                                 <th>Comment ID</th>
@@ -95,13 +99,13 @@ if (!isset($_SESSION['ID'])) {
                                 while ($row = $result->fetch_array()) {
                             ?>
 
-                                    <tr>
-                                        <td><?php echo $row['comment_id'] ?></td>
-                                        <td><?php echo $row['parent_comment_id'] ?></td>
-                                        <td><?php echo $row['comment'] ?></td>
-                                        <td><?php echo $row['comment_sender_name'] ?></td>
-                                        <td><?php echo $row['comment_at'] ?></td>
-                                    </tr>
+                            <tr>
+                                <td><?php echo $row['comment_id'] ?></td>
+                                <td><?php echo $row['parent_comment_id'] ?></td>
+                                <td><?php echo $row['comment'] ?></td>
+                                <td><?php echo $row['comment_sender_name'] ?></td>
+                                <td><?php echo $row['comment_at'] ?></td>
+                            </tr>
 
                             <?php    }
                             } else {
@@ -113,10 +117,5 @@ if (!isset($_SESSION['ID'])) {
             </main>
         </div>
     </div>
-    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-        feather.replace();
-    </script>
 </body>
 </html>
