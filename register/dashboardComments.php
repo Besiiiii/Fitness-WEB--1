@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include_once('dbConnection.php');
+include_once('../register/dbConnection.php');
 
 if (!isset($_SESSION['ID'])) {
     header("Location:dashboard.php");
@@ -55,6 +55,11 @@ if (!isset($_SESSION['ID'])) {
                     <i class='bx bxs-dashboard'></i>
                     Dashboard</a>
                 </li>
+                <li>
+                    <a href="dashboardProducts.php">
+                    <i class='bx bxs-dashboard'></i>
+                    Products</a>
+                </li>                
                 <li>
                     <a class="active" href="dashboardComments.php">
                     <i class='bx bxs-dashboard'></i>
