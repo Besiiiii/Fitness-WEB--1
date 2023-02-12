@@ -51,7 +51,7 @@
                     </i>Workouts Plans</a>
                 </li>
                 <li>
-                    <a href="proteins.php">
+                    <a href="products/proteins.php">
                         <i class='bx bxs-capsule' ></i>
                         Proteins</a>
                 </li>
