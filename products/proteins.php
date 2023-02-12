@@ -21,7 +21,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
 
-    <title>Proteins Combinations</title>
+    <title>Proteins</title>
 </head>
 
 <body>
@@ -53,7 +53,7 @@
                 <li>
                     <a class="btn-active" href="proteins.php">
                     <i class='bx bxs-capsule' ></i>
-                    Proteins Combinations</a>
+                    Proteins </a>
                 </li>
 
                 <?php if ($_SESSION['NAME'] == '') { ?>
@@ -90,19 +90,25 @@
     </header>
 <!-- ---------------------------Baza---------------------------------- -->
 <?php if ($_SESSION['ROLE'] == 'admin') { ?>
-    <div class="shto">
+    <div class="shtoj"><div class="shto">
         <?php //include ('shto_produkt.php'); ?>
+        <h1>Shto Proteina</h1>
         <form action="shto_produkt.php" method="post" enctype="multipart/form-data">
             Emri: <input type="text" name="emri"><br>
             Pershkrimi: <textarea name="pershkrimi"></textarea><br>
             Foto: <input type="file" name="foto"><br>
             <input type="submit" value="Shto produktin">
         </form>
-    </div>
+    </div></div>
 <?php } ?>
 
+<<<<<<< HEAD
     <main>
        <!-- <div class="kombinimi"> <h3>Proteina te ndryshme nga "OLIMP Company"</h3> </div>
+=======
+    <main> 
+        <!-- <div class="kombinimi"> <h3>Proteina te ndryshme nga "OLIMP Company"</h3> </div>
+>>>>>>> 3d2440258fee9b97ad1cf5928f7c06b838b411fa
             <div class="kombinimi-par"> 
                 <div class="kombinim">
                  <div class="flip-card-inner">
