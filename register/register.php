@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="../css/styleRegister.css">
     <!-- ------------------------- Icons CSS --------------------------- -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="js/register.js"></script>
+    <script src="register.js"></script>
 
 </head>
 <body>
@@ -84,23 +84,23 @@ if (isset($_POST['submit'])) {
                 <form action="" method="POST">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" class="form-control" name="name" id="t1" placeholder="Enter Name" required="">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name" required="">
                     </div>
                     <div class="form-group">
                         <label for="username">Username:</label>
-                        <input type="text" class="form-control" name="username" id="t2" placeholder="Enter Username" required="">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username" required="">
                     </div>                    
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="text" class="form-control" name="email" id="t3" placeholder="Enter Email" required="">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" required="">
                     </div>
                     <div class="form-group">
                         <label for="password">Password:</label>
-                        <input type="password" class="form-control" name="password" id="t4" placeholder="Enter Password" required="">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password" required="">
                     </div>
                     <div class="form-group">
                         <label for="role">Role:</label>
-                        <select class="form-control" name="role" id="t5" required="">
+                        <select class="form-control" name="role" id="role" required="">
                             <option value="">Select Role</option>
                             <option value="admin">Admin</option>
                             <option value="costumer">Costumer</option>
