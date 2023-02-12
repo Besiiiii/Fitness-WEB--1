@@ -70,7 +70,7 @@
                 <li>
                 <?php if ($_SESSION['ROLE'] == 'admin') { ?>
                     <a href="register/dashboard.php">
-                    <span data-feather="users"></span>
+                    <i class='bx bxs-dashboard'></i>
                     Dashboard</a>
                 </li>
                     <?php } ?>

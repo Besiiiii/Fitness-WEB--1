@@ -46,7 +46,7 @@
                     Home</a>
                 </li>
                 <li>
-                    <a class="btn-active" href="workouts.html">
+                    <a class="btn-active" href="workouts.php">
                     <i class='bx bx-dumbbell' >
                     </i>Workouts Plans</a>
                 </li>
@@ -70,7 +70,7 @@
                 <li>
                 <?php if ($_SESSION['ROLE'] == 'admin') { ?>
                     <a href="register/dashboard.php">
-                    <span data-feather="users"></span>
+                    <i class='bx bxs-dashboard'></i>
                     Dashboard</a>
                 </li>
                     <?php } ?>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['ID'])) {
-    header("Location:register/login.php");
+    header("Location:../login.php");
     exit();
 }
 
@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
             $_SESSION['ID'] = $row['id'];
             $_SESSION['ROLE'] = $row['role'];
             $_SESSION['NAME'] = $row['name'];
-            header("Location:dashboard.php");
+            header("Location:../index.php");
             die();
         } else {
             $errorMsg = "No user found on this username";

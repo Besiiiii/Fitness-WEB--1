@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-// Include database connection file
 
 if (!isset($_SESSION['ID'])) {
     header("Location:login.php");
@@ -59,6 +58,25 @@ if (!isset($_SESSION['ID'])) {
                     <i class='bx bxs-capsule' ></i>
                     Proteins Combinations</a>
                 </li>
+                <?php if ($_SESSION['NAME'] == '') { ?>
+                <li>
+                    <a href="../register/login.php" >
+                    <i class='bx bx-log-in'></i>
+                    Log In</a>
+                </li>
+                <li>
+                    <a href="../register/register.php" >
+                    <i class='bx bx-user-plus'></i>
+                    Register</a>
+                </li>
+                <?php } ?>
+                <li>
+                <?php if ($_SESSION['ROLE'] == 'admin') { ?>
+                    <a href="register/dashboard.php">
+                    <i class='bx bxs-dashboard'></i>
+                    Dashboard</a>
+                </li>
+                    <?php } ?>
                 <li>
                 <a class="nav-link" href="../register/logout.php">Hi, 
                     <?php echo ucwords($_SESSION['NAME']); ?> 
