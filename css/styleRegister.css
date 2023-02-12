@@ -6,10 +6,13 @@ body {
 	align-items: center;
 }
 .container {
-    margin-top: 120px;
-    width: 600px;
-    height: 80vh;
+    margin-top: 15%;
+	padding: 5vh;
     background: #F0F0F0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 .row{
 	display: flex;
@@ -42,6 +45,16 @@ h1{
 }
 
 .btn-submit {
+	padding: 10px 20px;
+	background: #333;
+	border: #1d1d1d 1px solid;
+	color: #f0f0f0;
+	font-size: 0.9em;
+	width: 100px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.btn{
 	padding: 10px 20px;
 	background: #333;
 	border: #1d1d1d 1px solid;
@@ -165,6 +178,26 @@ ul {
 	height:auto
 }textarea.form-control{
 	height:auto
-}.form-group{
-	margin-bottom:1rem
+}.form-group:last-child{
+	margin-top:1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media screen and (min-width: 551px ) and (max-width: 970px) {
+	.container{
+		margin-top: 30%;
+	}
+	header nav{
+        
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 551px ){
+	
+    header nav{
+        position: sticky;
+        justify-content: center;
+    }
 }
