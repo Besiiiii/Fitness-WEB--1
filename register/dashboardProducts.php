@@ -30,7 +30,7 @@
                                     <th>Photo</th>
                                     <th>Name of Product</th>
                                     <th>Description</th>
-                                    <th>Time of Product</th>
+                                    <th>Created</th>
                                 </tr>
                             </thead>
                             <tbody>

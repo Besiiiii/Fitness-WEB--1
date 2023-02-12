@@ -81,7 +81,7 @@ if (!isset($_SESSION['ID'])) {
                                 <th>Parent Comment ID</th>
                                 <th>Comment</th>
                                 <th>Name</th>
-                                <th>Time of Comment Send</th>
+                                <th>Created</th>
                             </tr>
                         </thead>
                         <tbody>
