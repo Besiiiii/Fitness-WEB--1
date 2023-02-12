@@ -30,11 +30,11 @@ body{
     width: 290px;
     height: 400px;
     font-family: sans-serif;
-    padding: 3vh 10vh 2vh;
+    padding: 3vh 2vh 2vh;
   }
   
 .title {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     margin: 0;
 }
@@ -82,18 +82,51 @@ body{
 }
 
 @media screen and (max-width: 550px ) {
-    nav{
+    header nav{
         position: sticky;
         justify-content: center;
     }
     main{
-        padding-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+    .kombinimi-par{
+        align-items: center;
+        justify-content: center;
+    }
+    .kombinimi h3{
+        font-size: 25px;
+    }
+    .kombinim {
+        width: 250px;
+        height: 320px;
+        font-family: sans-serif;
+        padding: 3vh 2vh 2vh;
+      }
+      #product_name{
+        text-align: center;
+      }
+      #product_image{
+        width: 200px;
+      }
 }
 
 @media screen and (min-width: 551px ) and (max-width: 970px){
-    nav{
+    header nav{
         position: sticky;
+        justify-content: center;
+    }
+    main{
+        padding-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .kombinimi-par{
+        align-items: center;
         justify-content: center;
     }
 }
