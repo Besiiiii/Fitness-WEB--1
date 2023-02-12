@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 body{
     background: url(../images/proteinsbg.jpg);
@@ -11,6 +14,7 @@ body{
     width: 100%;
     height: 100%;
 }
+/*
 .kombinimi h3{
     text-align: center;
     font-size: 35px;
@@ -21,14 +25,12 @@ body{
     margin-top: 10vh;
 }
 
-/** ------------------- Flip-cards ---------- **/
+ ------------------- Flip-cards ---------- 
 .kombinimi-par{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-/**  Gain Bolic   **/
-
 .kombinim {
     width: 290px;
     height: 400px;
@@ -82,8 +84,49 @@ body{
 .kombinimi-front img{
     width: 100%;
     padding-bottom: 10%;
-}
+} */
 
+.shto{
+    width: 300px;
+    height: fit-content;
+    border: 1px solid black;
+    border-radius: 7px;
+    background: url(../images/proteinsbg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.shto form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3d3d3d;
+    text-align: center;
+    max-width: 140px;
+    padding-bottom: 20px;
+}
+.shto input{
+    background-color:#f7f1e3 ;
+    border-radius: 14px;
+    padding-left: 5px;
+}
+.shto textarea{
+    min-width: 200px;
+    max-width: 200px;
+}
+.shto input[type=submit]{
+    width: fit-content;
+    padding: 5px;
+    background: #3d3d3d;
+    color: #f7f1e3;
+}
+.shtoj{
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+}
 @media screen and (max-width: 550px ) {
     header nav{
         position: sticky;
