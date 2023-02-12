@@ -90,8 +90,8 @@
     </header>
 <!-- ---------------------------Baza---------------------------------- -->
 <?php if ($_SESSION['ROLE'] == 'admin') { ?>
-    <div class="shtoj"><div class="shto">
-        <?php //include ('shto_produkt.php'); ?>
+    <div class="shtoj">
+        <div class="shto">
         <h1>Shto Proteina</h1>
         <form action="shto_produkt.php" method="post" enctype="multipart/form-data">
             Emri: <input type="text" name="emri"><br>
@@ -99,16 +99,12 @@
             Foto: <input type="file" name="foto"><br>
             <input type="submit" value="Shto produktin">
         </form>
-    </div></div>
+    </div>
+</div>
 <?php } ?>
 
-<<<<<<< HEAD
     <main>
        <!-- <div class="kombinimi"> <h3>Proteina te ndryshme nga "OLIMP Company"</h3> </div>
-=======
-    <main> 
-        <!-- <div class="kombinimi"> <h3>Proteina te ndryshme nga "OLIMP Company"</h3> </div>
->>>>>>> 3d2440258fee9b97ad1cf5928f7c06b838b411fa
             <div class="kombinimi-par"> 
                 <div class="kombinim">
                  <div class="flip-card-inner">

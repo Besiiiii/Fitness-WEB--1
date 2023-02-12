@@ -27,7 +27,7 @@
   {
     die("Gabim gjate shtimit te produktit: " . mysqli_error($lidhja));
   }
-  header("Location:../register/dashboardProducts.php");
+  header("Location:proteins.php");
 
   
   mysqli_close($lidhja);

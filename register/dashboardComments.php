@@ -54,11 +54,6 @@ if (!isset($_SESSION['ID'])) {
                     <a href="dashboard.php">
                     <i class='bx bxs-dashboard'></i>
                     Dashboard</a>
-                </li>
-                <li>
-                    <a href="dashboardProducts.php">
-                    <i class='bx bxs-dashboard'></i>
-                    Products</a>
                 </li>                
                 <li>
                     <a class="active" href="dashboardComments.php">
