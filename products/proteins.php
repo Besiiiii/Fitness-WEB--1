@@ -102,7 +102,7 @@
 <?php } ?>
 
     <main>
-       <div class="kombinimi"> <h3>Proteina te ndryshme nga "OLIMP Company"</h3> </div>
+       <!-- <div class="kombinimi"> <h3>Proteina te ndryshme nga "OLIMP Company"</h3> </div>
             <div class="kombinimi-par"> 
                 <div class="kombinim">
                  <div class="flip-card-inner">
@@ -270,11 +270,11 @@
                                 të monosakarideve në qarkullimin e gjakut.</p>
                         </div>
                     </div>
-                   </div>
+                   </div> -->
                    <?php include ("../register/dashboardProducts.php"); ?>
                    
-                </div>
-            </div>
+                <!-- </div>
+            </div> -->
     </main>
 </body>
 </html>

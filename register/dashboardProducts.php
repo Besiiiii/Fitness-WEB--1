@@ -17,48 +17,7 @@
     </head>
     
     <body>
-    <header>
-        <nav class="sidebar">
-                <div class="logo">
-                    <a href="../index.php">
-                        <img src="../images/3bfitness.png" alt="3bfintesslogo" class="logoimg">
-                    </a>
-                    <div class="locations">
-                        <a href="https://goo.gl/maps/fbq2JgwbzG8FaQZX8">
-                        <h6>3BFitness</h6>
-                        <i class='bx bx-current-location'><h3>Gjakova</h3></i>
-                        </a>
-                    </div>
-                </div>
-                <ul>
-                    <li>
-                        <a href="../index.php">
-                        <i class='bx bxs-home'></i>
-                        Home </a>
-                    </li>
-                    <li>
-                        <a href="dashboard.php">
-                        <i class='bx bxs-dashboard'></i>
-                        Dashboard</a>
-                    </li>
-                    <li>
-                        <a class="active" href="dashboardProducts.php">
-                        <i class='bx bxs-dashboard'></i>
-                        Products</a>
-                    </li>     
-                    <li>
-                        <a href="dashboardComments.php">
-                        <i class='bx bxs-dashboard'></i>
-                        Comments</a>
-                    </li>
-                    <li>
-                        <a href="logout.php">
-                        <i class='bx bxs-log-out'></i>
-                        Log out</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    
         <div class="container-fluid">
             <div>
                 <main role="main">
